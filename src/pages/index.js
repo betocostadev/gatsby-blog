@@ -64,6 +64,7 @@ export const query = graphql`
             title
             date
             author
+            author_page
           }
           fields {
             slug

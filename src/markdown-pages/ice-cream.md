@@ -1,8 +1,9 @@
 ---
 title: "Why I Love Ice Cream"
 date: "2017-08-10"
-description: 'Something about Ice Cream'
-author: "Yihua?"
+description: "Something about Ice Cream"
+author: "Yihua Zhang"
+author_page: "https://github.com/ZhangMYihua"
 ---
 
 ### Ice cream is the best.
