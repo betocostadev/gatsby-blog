@@ -2,6 +2,7 @@
 title: "Why I Love Ice Cream"
 date: "2017-08-10"
 description: "Something about Ice Cream"
+tags: [ice, cream, yihua, zhang]
 author: "Yihua Zhang"
 author_page: "https://github.com/ZhangMYihua"
 ---

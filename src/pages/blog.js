@@ -1,15 +1,14 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import styled from "styled-components"
 
 import Layout from "../components/layout"
-// import Image from "../components/image"
 import SEO from "../components/seo"
 
-    /* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div> */
+import styled from 'styled-components'
 
+const ArticleContainer = styled.div`
+  text-align: center;
+`
 const BlogLink = styled(Link)`
   text-decoration: none;
 `
@@ -29,13 +28,12 @@ const ExcerptText = styled.p`
   margin: 0 0 1rem 0;
 `
 
-const IndexPage = ({ data }) => {
+const Blog = ({ data }) => {
   console.log(data)
-  return(
+  return (
     <Layout>
-      <SEO title="Home" />
-      <Link to="/blog/">Articles</Link>
-      <div>
+      <SEO title="Blog" />
+      <ArticleContainer>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={ node.id }>
           <BlogLink to={ node.fields.slug }>
@@ -48,13 +46,10 @@ const IndexPage = ({ data }) => {
           </div>
         ))}
         <h4>Blog posts: { data.allMarkdownRemark.totalCount }</h4>
-      </div>
-      <Link to="/page-2/">Go to page 2</Link>
+      </ArticleContainer>
     </Layout>
   )
 }
-
-export default IndexPage
 
 export const query = graphql`
   query {
@@ -79,3 +74,5 @@ export const query = graphql`
     }
   }
 `
+
+export default Blog
