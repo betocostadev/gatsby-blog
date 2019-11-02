@@ -1,14 +1,17 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Scroll from "../images/icons/icons8-scroll.svg";
+// <Scroll width="100" height="100" />
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#b3e5fc`,
       marginBottom: `1.45rem`,
     }}
   >
+
     <div
       style={{
         margin: `0 auto`,
@@ -20,11 +23,16 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: `black`,
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          <Scroll style={{ verticalAlign: `middle`}} />
+          {
+            window.outerWidth >= 500
+            ? <span style={{ margin: `0 0 0 1rem`}}>{siteTitle}</span>
+            : ''
+          }
         </Link>
       </h1>
     </div>

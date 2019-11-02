@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Beto Costa's Blog`,
     description: `Beto Costa's Developer Blog. The place were you will learn nothing, at least, for now.`,
-    author: `@gatsbyjs`,
+    author: `Beto Costa`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -20,6 +20,14 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages`,
       },
     },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /icons/
+        }
+      }
+    },
     `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
@@ -33,7 +41,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

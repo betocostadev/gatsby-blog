@@ -35,6 +35,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <Link to="/blog/">Articles</Link>
+
       <div>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={ node.id }>
