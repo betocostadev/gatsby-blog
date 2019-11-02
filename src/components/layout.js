@@ -5,14 +5,18 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, {useState} from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
+// import "./layout.css"
+import { GlobalStyle } from './global.styles';
 
 const Layout = ({ children }) => {
+  const [ dayTime, setDayTime ] = useState('day')
+  console.log(dayTime)
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -23,8 +27,10 @@ const Layout = ({ children }) => {
     }
   `)
 
+
   return (
     <>
+      <GlobalStyle theme={dayTime} />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
