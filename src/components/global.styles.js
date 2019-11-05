@@ -38,13 +38,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: var(--baseFont);
     margin: 0;
     padding: 0;
-
-    @media screen and (min-width: 800px) {
-      padding: 10px;
-    }
-    @media screen and (min-width: 1200px) {
-      padding: 20px 40px;
-    }
   }
 
   *,

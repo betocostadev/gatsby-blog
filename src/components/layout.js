@@ -9,9 +9,8 @@ import React, {useState} from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-// import "./layout.css"
-import { GlobalStyle } from './global.styles';
+import Header from "./header/header.component"
+import { GlobalStyle } from "./global.styles";
 
 const Layout = ({ children }) => {
   const [ dayTime, setDayTime ] = useState('day')
